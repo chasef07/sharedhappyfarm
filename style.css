@@ -78,14 +78,28 @@ body {
     color: white;
 }
 
+
 .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
     max-width: 800px;
+    margin: 0 auto;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    transform: translateY(-50px); /* This will move the content up */
 }
+
 
 .hero-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* This adds shadow for better visibility */
 }
 
 .hero-content p {
@@ -145,10 +159,9 @@ section h2 {
     overflow: hidden;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
-}
-
-.card:hover {
-    transform: translateY(-5px);
+    display: flex;           /* Added */
+    flex-direction: column;  /* Added */
+    height: 100%;           /* Added */
 }
 
 .card img {
@@ -159,7 +172,22 @@ section h2 {
 
 .card h3, .card p {
     padding: 1rem;
+    padding-bottom: 0.5rem;  /* Reduced bottom padding */
 }
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.price {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;    /* Adjusted padding */
+    margin-top: auto;        /* Added - pushes price to bottom */
+}
+
+
 
 /* Experience Grid */
 .experience-grid {
@@ -194,10 +222,11 @@ section h2 {
 }
 
 .social-media img {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
     transition: transform 0.3s;
+    filter: brightness(0) invert(1); /* This makes the icons white */
 }
 
 .social-media img:hover {
@@ -283,11 +312,6 @@ section h2 {
 }
 
 
-.hero {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
 
 .slideshow-container {
     position: absolute;
@@ -325,19 +349,7 @@ section h2 {
     object-fit: cover;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
+
 
 .dots-container {
     position: absolute;
@@ -361,6 +373,7 @@ section h2 {
 .dot.active {
     background-color: white;
 }
+
 
 
 
