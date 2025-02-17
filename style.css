@@ -47,6 +47,10 @@ body {
     color: var(--primary-color);
 }
 
+.nav-links {
+    display: flex;
+}
+
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
@@ -66,18 +70,145 @@ body {
     border-radius: 4px;
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                url('images/hero-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+/* Mobile Menu */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
 }
 
+.mobile-menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--accent-color);
+    transition: var(--transition);
+}
+
+.mobile-menu-links a:hover {
+    color: var(--secondary-color);
+}
+
+.mobile-book-button {
+    margin-top: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.mobile-book-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 998;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hero Section - Fixed for Mobile */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-color); /* Fallback color */
+}
+
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color); /* Using theme color as fallback */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-color: var(--primary-color); /* Ensures each slide has themed background */
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Overlay to ensure text readability */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Ensures image is centered */
+    display: block; /* Prevents inline image spacing issues */
+}
 
 .hero-content {
     position: relative;
@@ -92,19 +223,22 @@ body {
     justify-content: center;
     height: 100vh;
     transform: translateY(-50px); /* This will move the content up */
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
 }
-
 
 .hero-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* This adds shadow for better visibility */
+    line-height: 1.2; /* Improves readability */
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added shadow for visibility */
+    line-height: 1.5; /* Improves readability */
 }
 
 .cta-button {
@@ -115,6 +249,29 @@ body {
     text-decoration: none;
     border-radius: 4px;
     transition: var(--transition);
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    background-color: white;
 }
 
 /* Section Styles */
@@ -187,8 +344,6 @@ section h2 {
     margin-top: auto;        /* Added - pushes price to bottom */
 }
 
-
-
 /* Experience Grid */
 .experience-grid {
     display: grid;
@@ -202,7 +357,6 @@ section h2 {
     background: var(--accent-color);
     border-radius: 8px;
 }
-
 
 .footer {
     background: var(--primary-color);
@@ -232,7 +386,6 @@ section h2 {
 .social-media img:hover {
     transform: scale(1.1);
 }
-
 
 .logo {
     display: flex;
@@ -311,76 +464,14 @@ section h2 {
     background-color: var(--accent-color);
 }
 
-
-
-.slideshow-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Overlay to ensure text readability */
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-.dots-container {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    z-index: 3;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.dot.active {
-    background-color: white;
-}
-
-
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
     }
     
     .about-grid {
@@ -389,6 +480,27 @@ section h2 {
     
     .hero-content h2 {
         font-size: 2.5rem;
+        margin-bottom: 0.75rem; /* Reduced spacing on mobile */
+    }
+    
+    .hero-content {
+        padding: 0 1.5rem;
+        transform: translateY(-30px); /* Less movement on mobile */
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .dots-container {
+        bottom: 10px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px; /* Ensure proper spacing between dots */
     }
     
     .footer-content {
@@ -414,5 +526,27 @@ section h2 {
     
     .map-container {
         min-height: 350px;
+    }
+}
+
+/* Additional fix for very small screens */
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .slide img {
+        object-position: center 20%; /* Adjusts vertical position for smaller screens */
+    }
+    
+    .mobile-menu {
+        width: 100%;
+        max-width: none;
     }
 }
