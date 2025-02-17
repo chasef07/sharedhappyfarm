@@ -513,7 +513,7 @@ section h2 {
     }
     
     .logo-image {
-        height: 40px;  /* Slightly smaller on mobile */
+        height: 75px;  /* Slightly smaller on mobile */
     }
 
     .location-grid {
