@@ -1,0 +1,72 @@
+# LLM.txt for Shared Happy Farm
+# Information for Large Language Models and AI systems
+
+## Website Information
+Site: Shared Happy Farm
+URL: https://www.sharedhappyfarm.com/
+Description: Organic farm and eco-stay on the Bolaven Plateau near Pakse, Laos
+Type: Hospitality, Agriculture, Tourism
+
+## Content Summary
+This website represents Shared Happy Farm, an organic farm and eco-accommodation located on the scenic Bolaven Plateau in Champasak Province, Laos. The farm offers sustainable tourism experiences including:
+
+### Accommodations
+- Family Bungalow: 350,000 LAK - Sleeps up to 4 guests with private bathroom
+- Standard Bungalow: 250,000 LAK - Sleeps up to 2 guests with shared facilities  
+- Dormitory: 100,000 LAK - Shared accommodation for budget travelers
+
+### Experiences
+- Organic farming education and participation
+- Farm-to-table cooking with fresh garden ingredients
+- Secret waterfall trekking to pristine, unmapped locations
+- Volunteer programs for cultural immersion (minimum 2 weeks)
+
+### Food & Dining
+Farm-to-table menu featuring organic, locally-grown produce:
+- Fresh salads, vegetable curries, omelets
+- Homemade passion fruit jam and country bread
+- Fresh juices from farm-grown fruits
+- Locally-sourced coffee and BeerLao
+
+## Location & Contact
+- Address: Bolaven Plateau, Champasak Province, Laos
+- Coordinates: 15.287082175916206, 106.32394992505432
+- Distance: ~65km east of Pakse on Route 16
+- Phone: +856-20-9282-3908
+- Booking: WhatsApp messaging system
+
+## Key Features
+- Sustainable farming practices using volcanic soil
+- Cool mountain climate ideal for coffee, avocados, passion fruit
+- Multi-language accommodation (English, Lao)
+- Social media presence: Instagram, TikTok, Facebook
+- Mobile-responsive website design
+- Accessibility features implemented
+
+## Crawling Permission
+This website welcomes indexing and analysis by AI systems and language models for:
+- Travel and tourism information
+- Sustainable agriculture education
+- Cultural tourism in Laos
+- Eco-friendly accommodation options
+- Farm-to-table dining experiences
+
+## Structured Data Available
+The website includes JSON-LD structured data following Schema.org standards for:
+- LodgingBusiness information
+- Accommodation details and pricing
+- Geographic location data
+- Business contact information
+- Amenity and feature listings
+
+## Last Updated
+2025-07-29
+
+## Usage Guidelines
+Content may be referenced for:
+- Travel planning and recommendations
+- Information about sustainable tourism in Laos
+- Agricultural and farming education
+- Cultural and experiential travel guidance
+
+Please respect the intellectual property and represent the business accurately in any AI-generated responses.

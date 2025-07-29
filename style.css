@@ -301,8 +301,11 @@ body {
     height: 12px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.5);
+    border: none;
     cursor: pointer;
     transition: var(--transition);
+    padding: 0;
+    margin: 0;
 }
 
 .dot.active {
@@ -570,6 +573,71 @@ section h2 {
 
 .social-media img:hover {
     transform: scale(1.1);
+}
+
+/* Accessibility & Focus Indicators
+   ========================================================================== */
+/* Enhanced focus indicators for better keyboard navigation */
+a:focus,
+button:focus,
+.dot:focus,
+.mobile-menu-toggle:focus {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Custom focus styles for specific elements */
+.nav-links a:focus,
+.mobile-menu-links a:focus {
+    background-color: rgba(88, 129, 87, 0.1);
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.book-button:focus,
+.mobile-book-button:focus,
+.cta-button:focus,
+.directions-button:focus {
+    outline: 3px solid white;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px var(--secondary-color);
+}
+
+.card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(88, 129, 87, 0.3);
+}
+
+.social-media a:focus {
+    transform: scale(1.1);
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 4px;
+    border-radius: 50%;
+}
+
+/* Ensure keyboard users can see focused slideshow dots */
+.dot:focus {
+    background-color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1002;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
 }
 
 /* Scroll Behavior
