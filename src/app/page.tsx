@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
-import { Menu, X, MapPin, Phone, Mail, Calendar, Leaf, ChefHat, Users } from "lucide-react"
+import { Menu, X, MapPin, Phone, Mail, Leaf, ChefHat, Users } from "lucide-react"
 import { FaTiktok, FaFacebook, FaWhatsapp, FaInstagram } from "react-icons/fa"
 
 const Waves = dynamic(() => import("lucide-react").then((mod) => ({ default: mod.Waves })), {
@@ -122,12 +122,12 @@ export default function Home() {
               Find Us
             </Button>
             <Button asChild className="hover:scale-105 transition-transform duration-200">
-              <a 
-                href="https://www.agoda.com/shared-happy-farm/hotel/pakxong-la.html?countryId=190&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-09-9&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=USD&isFreeOccSearch=false&los=1&searchrequestid=66f97df6-df40-4153-a053-950d580e0299&ds=ubENp7sPXQ2i1eM9"
+              <a
+                href="https://wa.me/8562092823908"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Calendar className="mr-2 h-4 w-4" />
+                <FaWhatsapp className="mr-2 h-4 w-4" />
                 Book Now
               </a>
             </Button>
@@ -191,12 +191,12 @@ export default function Home() {
                 </Button>
                 <Separator />
                 <Button asChild className="w-full mt-4 hover:scale-105 transition-transform">
-                  <a 
-                    href="https://www.agoda.com/shared-happy-farm/hotel/pakxong-la.html?countryId=190&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-09-9&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=USD&isFreeOccSearch=false&los=1&searchrequestid=66f97df6-df40-4153-a053-950d580e0299&ds=ubENp7sPXQ2i1eM9"
+                  <a
+                    href="https://wa.me/8562092823908"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Calendar className="mr-2 h-4 w-4" />
+                    <FaWhatsapp className="mr-2 h-4 w-4" />
                     Book Now
                   </a>
                 </Button>
@@ -235,12 +235,12 @@ export default function Home() {
               Experience Nature, Live Simply, Stay Happy!
             </p>
             <Button size="lg" asChild className="hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
-              <a 
-                href="https://www.agoda.com/shared-happy-farm/hotel/pakxong-la.html?countryId=190&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-09-9&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=USD&isFreeOccSearch=false&los=1&searchrequestid=66f97df6-df40-4153-a053-950d580e0299&ds=ubENp7sPXQ2i1eM9"
+              <a
+                href="https://wa.me/8562092823908"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Calendar className="mr-2 h-5 w-5" />
+                <FaWhatsapp className="mr-2 h-5 w-5" />
                 Book Your Stay
               </a>
             </Button>
@@ -687,18 +687,18 @@ export default function Home() {
 
             <div className="text-center md:text-right">
               <h3 className="text-xl font-bold mb-4">Quick Book</h3>
-              <Button 
+              <Button
                 variant="outline"
                 asChild
                 className="hover:scale-105 transition-all duration-200 bg-primary-foreground text-primary hover:bg-primary-foreground/90"
               >
-                <a 
-                  href="https://www.agoda.com/shared-happy-farm/hotel/pakxong-la.html?countryId=190&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-09-9&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=USD&isFreeOccSearch=false&los=1&searchrequestid=66f97df6-df40-4153-a053-950d580e0299&ds=ubENp7sPXQ2i1eM9"
+                <a
+                  href="https://wa.me/8562092823908"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Calendar className="mr-2 h-4 w-4" />
-                  Book via Agoda
+                  <FaWhatsapp className="mr-2 h-4 w-4" />
+                  Book via WhatsApp
                 </a>
               </Button>
             </div>
