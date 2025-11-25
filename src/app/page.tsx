@@ -624,7 +624,18 @@ export default function Home() {
             </div>
             
             <div className="text-center">
-              <p className="mb-4">© 2025 Shared Happy Farm. All rights reserved.</p>
+              <p className="mb-2">© 2025 Shared Happy Farm. All rights reserved.</p>
+              <p className="mb-4 text-sm opacity-80">
+                Powered by{' '}
+                <a
+                  href="https://www.databuddiessolutions.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:opacity-100 transition-opacity"
+                >
+                  Data Buddies
+                </a>
+              </p>
               <div className="flex justify-center space-x-4">
                 <Button
                   variant="outline" 
